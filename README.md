@@ -15,3 +15,7 @@ create mongodb cluster
 ## Frontend SETUP
 
 npm i axios moment react-file-base64 redux redux-thunk
+
+# INVALIDE HOOK CALL ERROR
+
+https://reactjs.org/warnings/invalid-hook-call-warning.html
