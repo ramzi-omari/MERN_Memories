@@ -16,6 +16,14 @@ create mongodb cluster
 
 npm i axios moment react-file-base64 redux redux-thunk
 
+> NB: **set the state using an object**: when we have a state with multiple argument: we use a **spread operator '...'** to take all the arguments of prevState withoun any change, and then change only the argument we want 'message' in this example
+
+```js
+onChange={(e) =>
+            setPostData({ ...postData, message: e.target.value })
+          }
+```
+
 # INVALIDE HOOK CALL ERROR
 
 https://reactjs.org/warnings/invalid-hook-call-warning.html
