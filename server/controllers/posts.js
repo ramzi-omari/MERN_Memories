@@ -24,3 +24,19 @@ export const createPost = async (req, res) => {
     res.status(409).json({ message: error.message });
   }
 };
+
+export const updatePost = async (req, res) => {
+  // from routes we took id posts/id and then rename property
+  const { id: _id } = req.params;
+  // receive updated data sent from frontend
+  const post = req.body;
+  // check if id is a mongoose object id
+  if (!mongoose.Types.ObjectId.isValid(_id))
+    return res.status(404).send("No post with that id");
+
+  const updatedPost = await PostMessage.findByIdAndUpdate(_id, post, {
+    new: true,
+  });
+
+  res.json(updatedPost);
+};
