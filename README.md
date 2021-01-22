@@ -26,6 +26,7 @@ onChange={(e) =>
 
 ## to create a new action:
 
+(update):
 1- we create a route for the action
 2- in Controllers we set the logic with the mongoDB database
 3- we handle the states & action in the frontend components (post posts & form)
@@ -34,6 +35,18 @@ onChange={(e) =>
 6- import the action in the frontend (for step 3)
 7- update the case in reducer
 8- in the 'update' we fetch the data from the updated post using (useSelector)
+
+(delete):
+
+- backend:
+  1- create new route
+  2- create deletePost function in controllers
+- frontend:
+  3- implement api call
+  4- create action creator and send the id as payload
+  5- implement delete in the **reducer**
+  6- import the reducer (usedispatch) and the action in the component
+  7- use dispatch(deletePost(..id)) in the component's button
 
 # INVALIDE HOOK CALL ERROR
 
