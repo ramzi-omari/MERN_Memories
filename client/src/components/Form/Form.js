@@ -11,7 +11,8 @@ const Form = () => {
     title: "",
     message: "",
     tags: "",
-    selectedFile: "",
+    selectedFile:
+      "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg",
   });
   const classes = useStyles();
   const dispatch = useDispatch();
@@ -73,7 +74,7 @@ const Form = () => {
           <FileBase
             type="file"
             multiple={false}
-            onDone={(base64) =>
+            onDone={({ base64 }) =>
               setPostData({ ...postData, selectedFile: base64 })
             }
           ></FileBase>
