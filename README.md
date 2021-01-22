@@ -24,6 +24,17 @@ onChange={(e) =>
           }
 ```
 
+## to create a new action:
+
+1- we create a route for the action
+2- in Controllers we set the logic with the mongoDB database
+3- we handle the states & action in the frontend components (post posts & form)
+4- api/index we implement api call for the action(updatePost for ex) route
+5- actions/posts to implement the action using API (step 4)
+6- import the action in the frontend (for step 3)
+7- update the case in reducer
+8- in the 'update' we fetch the data from the updated post using (useSelector)
+
 # INVALIDE HOOK CALL ERROR
 
 https://reactjs.org/warnings/invalid-hook-call-warning.html

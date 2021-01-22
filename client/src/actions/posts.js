@@ -6,12 +6,12 @@ import * as api from "../api/index.js";
 // a function that returns another function(async) to do an asynchronous call
 export const getPosts = () => async (dispatch) => {
   try {
-    // an action
+    // a fetch action
     const { data } = await api.fetchPosts();
 
-    dispatch({ type: "FETCH_ALL", payload: [] });
+    dispatch({ type: "FETCH_ALL", payload: data });
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
   }
 };
 
@@ -22,6 +22,18 @@ export const createPost = (post) => async (dispatch) => {
 
     dispatch({ type: "CREATE", payload: data });
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
+  }
+};
+
+export const updatePost = (id, post) => async (dispatch) => {
+  try {
+    // response
+    const { data } = await api.updatePost(id, post);
+    // that returns the updated post
+
+    dispatch({ type: "UPDATE", payload: data });
+  } catch (error) {
+    console.log(error);
   }
 };
