@@ -48,13 +48,19 @@ onChange={(e) =>
   6- import the reducer (usedispatch) and the action in the component
   7- use dispatch(deletePost(..id)) in the component's button
 
-  ## Deployement
+  ## Deployement Backend on Heroku
 
   - install heroku
   - create git in server folder
   - add Procfile and initial route in server/index.js
   - add and commit and then deploy to heroku
   - change url in API index.js
+
+  ## deployement Frontend on Netlify
+
+  - npm run build in client folder to create Build folder
+  - drag and drop build folder from main folder to netlify
+  - change domaine
 
 # INVALIDE HOOK CALL ERROR
 
